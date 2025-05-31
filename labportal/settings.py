@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-jllt=kdm3e!r6ouak-^6=$43m@8l#gj!upqe0hzd1k(r%l5b7v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['labportal-dwfadph2cfdvcmbe.centralindia-01.azurewebsites.net']
 
 # Application definition
 
