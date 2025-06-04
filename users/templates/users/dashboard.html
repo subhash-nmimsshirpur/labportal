@@ -1,0 +1,41 @@
+{% extends "users/base.html" %}
+
+{% block title %}
+<title>Dashboard</title>
+{% endblock title %} 
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-9 col-xl-8">
+      <div class="p-4 p-md-5 shadow rounded bg-white mt-1">
+        <h2 class="text-center mb-4">Dashboard</h2>
+        <hr>
+        <!-- Example dashboard content, replace with your actual content -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Welcome, {{ user.username }}!</h5>
+                <p class="card-text">Here you can manage your profile, view your submissions, and more.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="{% url 'dashboard' %}">Dashboard</a></li>                  
+                  <li><a href="{% url 'change_password' %}">Change Password</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End example dashboard content -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

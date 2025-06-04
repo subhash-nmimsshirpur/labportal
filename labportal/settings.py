@@ -26,11 +26,12 @@ SECRET_KEY = 'django-insecure-jllt=kdm3e!r6ouak-^6=$43m@8l#gj!upqe0hzd1k(r%l5b7v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['labportal-dwfadph2cfdvcmbe.centralindia-01.azurewebsites.net']
+ALLOWED_HOSTS = ['labportal-dwfadph2cfdvcmbe.centralindia-01.azurewebsites.net', '127.0.0.1', 'localhost']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 ROOT_URLCONF = 'labportal.urls'
 
@@ -130,3 +133,16 @@ MEDIA_ROOT = 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email backend for development
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Required fields even though not used in console backend
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+DEFAULT_FROM_EMAIL = 'noreply@labportal.com'
+
+LOGIN_URL = 'login'                  # for @login_required
+LOGIN_REDIRECT_URL = 'dashboard'     # after successful login
+LOGOUT_REDIRECT_URL = 'login'        # after logout
+
