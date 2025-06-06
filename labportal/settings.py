@@ -155,3 +155,9 @@ LOGIN_URL = 'login'                  # for @login_required
 LOGIN_REDIRECT_URL = 'dashboard'     # after successful login
 LOGOUT_REDIRECT_URL = 'login'        # after logout
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://labportal-dwfadph2cfdvcmbe.centralindia-01.azurewebsites.net"
+]
+
+
+
