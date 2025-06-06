@@ -32,8 +32,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       
-      - name: Migration 
-        run: python3 manage.py migrate
+      # - name: Migration 
+      #   run: python3 manage.py migrate
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
